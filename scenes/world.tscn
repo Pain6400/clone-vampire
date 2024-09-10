@@ -1,13 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6jb8dl5yxad0"]
+[gd_scene load_steps=3 format=3 uid="uid://c6jb8dl5yxad0"]
 
 [ext_resource type="PackedScene" uid="uid://ssixnswy2px4" path="res://scenes/player.tscn" id="1_lacu5"]
+[ext_resource type="PackedScene" uid="uid://bl0336taa5l2i" path="res://scenes/Enemigos/pig.tscn" id="2_aq8ft"]
 
 [node name="world" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 696.0
-offset_bottom = 638.0
+offset_top = -23.0
+offset_right = 1162.0
+offset_bottom = 643.0
 color = Color(0.0517867, 0.532234, 0.536136, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_lacu5")]
 position = Vector2(566, 307)
+
+[node name="Pig" parent="." instance=ExtResource("2_aq8ft")]
+position = Vector2(455, 311)

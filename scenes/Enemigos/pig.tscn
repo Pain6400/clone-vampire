@@ -105,6 +105,7 @@ script = ExtResource("1_wrnux")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6ocqx")
 animation = &"run"
+autoplay = "run"
 frame = 10
 frame_progress = 0.582718
 
