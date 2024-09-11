@@ -15,4 +15,4 @@ color = Color(0.0517867, 0.532234, 0.536136, 1)
 position = Vector2(566, 307)
 
 [node name="Pig" parent="." instance=ExtResource("2_aq8ft")]
-position = Vector2(455, 311)
+position = Vector2(427, 264)

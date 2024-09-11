@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ssixnswy2px4"]
+[gd_scene load_steps=39 format=3 uid="uid://ssixnswy2px4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_h2pv7"]
 [ext_resource type="Texture2D" uid="uid://cs2um3q5ukys5" path="res://assets/art/Pixel Adventure 2/Enemies/Chicken/Idle (32x34).png" id="1_xpjha"]
@@ -248,12 +248,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ipxvl"]
-radius = 6.0
-height = 28.7375
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0axsm"]
-radius = 5.0
-height = 24.0
+radius = 12.0
+height = 42.0
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -267,9 +263,5 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
-rotation = 2.09439
+rotation = 3.14159
 shape = SubResource("CapsuleShape2D_ipxvl")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 2)
-shape = SubResource("CapsuleShape2D_0axsm")

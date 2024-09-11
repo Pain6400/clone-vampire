@@ -1,7 +1,8 @@
 extends CharacterBody2D
+class_name Player
 
-
-const SPEED = 100.0
+@export var SPEED = 100.0
+@export var life = 100
 
 func _physics_process(delta):
 
@@ -24,3 +25,7 @@ func _physics_process(delta):
 	
 
 	move_and_slide()
+
+func decrease_life(value):
+	life -= value
+	print(life)

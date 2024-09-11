@@ -96,10 +96,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjee6"]
-radius = 12.0
+radius = 15.0
 height = 34.0
 
 [node name="Pig" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_wrnux")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -113,3 +114,9 @@ frame_progress = 0.582718
 position = Vector2(0, 2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_kjee6")
+
+[node name="TimerDamage" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="TimerDamage" to="." method="_on_timer_damage_timeout"]
