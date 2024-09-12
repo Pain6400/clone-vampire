@@ -252,7 +252,7 @@ radius = 12.0
 height = 42.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2we21"]
-bg_color = Color(0.325441, 0.325441, 0.325441, 1)
+bg_color = Color(0.0768358, 0.0768358, 0.0768357, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7vk7"]
 bg_color = Color(0.367853, 0.00383566, 0.127627, 1)

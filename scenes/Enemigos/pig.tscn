@@ -117,6 +117,11 @@ shape = SubResource("CapsuleShape2D_kjee6")
 
 [node name="TimerDamage" type="Timer" parent="."]
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(5, 31)
+scale = Vector2(113.95, 64.7)
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="TimerDamage" to="." method="_on_timer_damage_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

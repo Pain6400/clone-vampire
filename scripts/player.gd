@@ -1,10 +1,10 @@
 extends CharacterBody2D
 class_name Player
 
-@export var SPEED = 100.0
+@export var SPEED = 1000.0
 @export var life = 100
 
-func _process(delta: float) -> void:
+func _ready() -> void:
 	$ProgressBar.value = life
 
 func _physics_process(delta):
@@ -31,4 +31,9 @@ func _physics_process(delta):
 
 func decrease_life(value):
 	life -= value
-	print(life)
+	$ProgressBar.value = life
+	if life == 0:
+		death()
+
+func death():
+	print("Muerto")

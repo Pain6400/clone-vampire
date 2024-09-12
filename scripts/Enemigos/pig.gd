@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var player = $"../Player"
 @export var SPEED := 80
-@export var damage = 2
+@export var damage = 4
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -28,3 +28,7 @@ func _on_timer_damage_timeout() -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	$TimerDamage.stop()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
