@@ -4,6 +4,9 @@ class_name Player
 @export var SPEED = 100.0
 @export var life = 100
 
+func _process(delta: float) -> void:
+	$ProgressBar.value = life
+
 func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.

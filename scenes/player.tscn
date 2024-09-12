@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ssixnswy2px4"]
+[gd_scene load_steps=41 format=3 uid="uid://ssixnswy2px4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_h2pv7"]
 [ext_resource type="Texture2D" uid="uid://cs2um3q5ukys5" path="res://assets/art/Pixel Adventure 2/Enemies/Chicken/Idle (32x34).png" id="1_xpjha"]
@@ -251,6 +251,12 @@ animations = [{
 radius = 12.0
 height = 42.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2we21"]
+bg_color = Color(0.325441, 0.325441, 0.325441, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7vk7"]
+bg_color = Color(0.367853, 0.00383566, 0.127627, 1)
+
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_h2pv7")
@@ -265,3 +271,14 @@ animation = &"idle"
 position = Vector2(0, 2)
 rotation = 3.14159
 shape = SubResource("CapsuleShape2D_ipxvl")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -28.0
+offset_top = 17.0
+offset_right = 28.0
+offset_bottom = 21.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2we21")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s7vk7")
+step = 1.0
+value = 50.0
+show_percentage = false
