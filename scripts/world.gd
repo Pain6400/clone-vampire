@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var pig_scene: PackedScene
+@export var bullet_scene: PackedScene
 
 func _ready() -> void:
 	pass # Replace with function body.
@@ -21,3 +22,8 @@ func create_enemy():
 
 func _on_timer_create_enemy_timeout() -> void:
 	create_enemy()
+
+func create_bullet():
+	var bullet = bullet_scene.instantiate()
+	bullet.position = position
+	add_child(bullet)

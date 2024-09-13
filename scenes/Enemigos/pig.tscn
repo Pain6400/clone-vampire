@@ -99,7 +99,7 @@ animations = [{
 radius = 15.0
 height = 34.0
 
-[node name="Pig" type="Area2D"]
+[node name="Pig" type="Area2D" groups=["enemy_group"]]
 collision_layer = 2
 script = ExtResource("1_wrnux")
 

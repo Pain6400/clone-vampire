@@ -16,8 +16,6 @@ color = Color(0.0517867, 0.532234, 0.536136, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_lacu5")]
 position = Vector2(566, 307)
-SPEED = 1000.0
-life = 100
 
 [node name="TimerCreateEnemy" type="Timer" parent="."]
 autostart = true

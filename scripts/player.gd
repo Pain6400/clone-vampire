@@ -37,3 +37,4 @@ func decrease_life(value):
 
 func death():
 	print("Muerto")
+	
