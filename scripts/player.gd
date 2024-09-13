@@ -1,9 +1,14 @@
 extends CharacterBody2D
 class_name Player
 
-@export var SPEED = 1000.0
+@export var SPEED = 100.0
 @export var life = 100
+@export var bullet_scene: PackedScene
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		create_bullet()
+		
 func _ready() -> void:
 	$ProgressBar.value = life
 
@@ -28,6 +33,12 @@ func _physics_process(delta):
 	
 
 	move_and_slide()
+
+func create_bullet():
+	var bullet = bullet_scene.instantiate()
+	bullet.position = position
+	get_parent().add_child(bullet)
+
 
 func decrease_life(value):
 	life -= value

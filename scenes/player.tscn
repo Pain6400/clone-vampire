@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://ssixnswy2px4"]
+[gd_scene load_steps=42 format=3 uid="uid://ssixnswy2px4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_h2pv7"]
 [ext_resource type="Texture2D" uid="uid://cs2um3q5ukys5" path="res://assets/art/Pixel Adventure 2/Enemies/Chicken/Idle (32x34).png" id="1_xpjha"]
 [ext_resource type="Texture2D" uid="uid://bli3dvxq43vhc" path="res://assets/art/Pixel Adventure 2/Enemies/Chicken/Hit (32x34).png" id="2_csipl"]
+[ext_resource type="PackedScene" uid="uid://2ptvu5jtnuuj" path="res://scenes/bullet/bullet.tscn" id="2_lkiop"]
 [ext_resource type="Texture2D" uid="uid://b0dqh7a4gw0wa" path="res://assets/art/Pixel Adventure 2/Enemies/Chicken/Run (32x34).png" id="3_prk4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ty311"]
@@ -260,6 +261,7 @@ bg_color = Color(0.367853, 0.00383566, 0.127627, 1)
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_h2pv7")
+bullet_scene = ExtResource("2_lkiop")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
