@@ -30,7 +30,7 @@ animations = [{
 radius = 15.0333
 
 [node name="eagle" type="Area2D" groups=["enemy_group"]]
-collision_mask = 4
+collision_layer = 4
 script = ExtResource("1_xmq1g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -48,7 +48,9 @@ shape = SubResource("CircleShape2D_ud4k8")
 position = Vector2(7.00003, 17)
 scale = Vector2(116.7, 70)
 
-[node name="TimerDamege" type="Timer" parent="."]
+[node name="TimerDamage" type="Timer" parent="."]
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
-[connection signal="timeout" from="TimerDamege" to="." method="_on_timer_damage_timeout"]
+[connection signal="timeout" from="TimerDamage" to="." method="_on_timer_damage_timeout"]

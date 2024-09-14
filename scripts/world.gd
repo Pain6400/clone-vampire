@@ -33,5 +33,5 @@ func create_eagle():
 	add_child(enemy_eagle)
 	
 func _on_timer_create_enemy_timeout() -> void:
-	#create_pig()
+	create_pig()
 	create_eagle()
