@@ -21,9 +21,9 @@ func _physics_process(delta):
 		
 	if direction != Vector2.ZERO:
 		velocity = direction * SPEED
-		if direction.x > 0:
+		if direction.x < 0:
 			$AnimatedSprite2D.flip_h = true
-		elif direction.x < 0:
+		elif direction.x > 0:
 			$AnimatedSprite2D.flip_h = false	
 				
 		$AnimatedSprite2D.play("run")
