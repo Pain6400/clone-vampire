@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("test")
 	if body is Player:
 		$TimerDamage.start()
 

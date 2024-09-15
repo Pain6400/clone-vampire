@@ -1,21 +1,62 @@
-[gd_scene load_steps=6 format=3 uid="uid://2ptvu5jtnuuj"]
+[gd_scene load_steps=15 format=3 uid="uid://2ptvu5jtnuuj"]
 
-[ext_resource type="Texture2D" uid="uid://b5to65vkkhvku" path="res://assets/art/kenney_pixel-platformer/Tiles/Characters/tile_0013.png" id="1_x66rm"]
 [ext_resource type="Script" path="res://scripts/bullet/bullet.gd" id="1_yq6qs"]
-[ext_resource type="Texture2D" uid="uid://d02gkkob5kiv3" path="res://assets/art/kenney_pixel-platformer/Tiles/Characters/tile_0014.png" id="2_fy7br"]
+[ext_resource type="Texture2D" uid="uid://defs8qlh02j07" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball/Sprites/fireball-1.png" id="2_vejiq"]
+[ext_resource type="Texture2D" uid="uid://d3nwo0p33c2w2" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball/Sprites/fireball-2.png" id="3_qf5jd"]
+[ext_resource type="Texture2D" uid="uid://6tnpftuw5eua" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball/Sprites/fireball-3.png" id="4_5ylbf"]
+[ext_resource type="Texture2D" uid="uid://pfagd30onrox" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball/Sprites/fireball-4.png" id="5_ue73f"]
+[ext_resource type="Texture2D" uid="uid://mr37wojugkgg" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball/Sprites/fireball-5.png" id="6_xwjno"]
+[ext_resource type="Texture2D" uid="uid://cpl82nv5gvkny" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-1.png" id="7_vor1f"]
+[ext_resource type="Texture2D" uid="uid://vxke0h8bw2mt" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-2.png" id="8_xjjry"]
+[ext_resource type="Texture2D" uid="uid://laaggas7n35s" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-3.png" id="9_poy7g"]
+[ext_resource type="Texture2D" uid="uid://d2bioe0abyoaa" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-4.png" id="10_qh7sp"]
+[ext_resource type="Texture2D" uid="uid://71wrsffbc0ry" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-5.png" id="11_qtmuy"]
+[ext_resource type="Texture2D" uid="uid://oqq8rrg71k1q" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/misc/fireball-hit/Sprites/fireball-hit-6.png" id="12_srvws"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kn50"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_x66rm")
+"texture": ExtResource("2_vejiq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_fy7br")
+"texture": ExtResource("3_qf5jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ylbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ue73f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xwjno")
 }],
 "loop": true,
-"name": &"arm_1",
+"name": &"fireball",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vor1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xjjry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_poy7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qh7sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qtmuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_srvws")
+}],
+"loop": true,
+"name": &"fireball_hit",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5dye"]
@@ -28,9 +69,8 @@ script = ExtResource("1_yq6qs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4kn50")
-animation = &"arm_1"
-frame = 1
-frame_progress = 0.910746
+animation = &"fireball"
+autoplay = "fireball"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
