@@ -54,7 +54,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_srvws")
 }],
-"loop": true,
+"loop": false,
 "name": &"fireball_hit",
 "speed": 5.0
 }]
@@ -69,7 +69,7 @@ script = ExtResource("1_yq6qs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4kn50")
-animation = &"fireball"
+animation = &"fireball_hit"
 autoplay = "fireball"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
