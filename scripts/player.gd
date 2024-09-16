@@ -38,7 +38,7 @@ func _physics_process(delta):
 func create_bullet():
 	var bullet = bullet_scene.instantiate()
 	bullet.position = position
-	bullet.direction_player(direction_player)
+	bullet.direction_player = direction_player
 	get_parent().add_child(bullet)
 
 
