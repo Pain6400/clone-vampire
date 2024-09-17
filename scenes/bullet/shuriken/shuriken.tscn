@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwu5so84hbrdr"]
+
+[ext_resource type="Texture2D" uid="uid://dydjxda6lkxn6" path="res://assets/art/Trap and Weapon/00 All.png" id="1_oqhgd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_io6hp"]
+radius = 30.0167
+
+[node name="shuriken" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oqhgd")
+region_enabled = true
+region_rect = Rect2(335.717, 352.337, 46.9662, 47.1175)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_io6hp")
