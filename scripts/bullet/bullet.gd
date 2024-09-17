@@ -13,15 +13,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not has_collided and direction_player:
-		# Rotar la bola de fuego según la dirección y establecer un ángulo fijo
-		if direction_player.y < 0: # Disparar hacia arriba
-			rotation_degrees = -90
-		elif direction_player.y > 0: # Disparar hacia abajo
-			rotation_degrees = 90
-		elif direction_player.x > 0: # Disparar hacia la derecha
-			rotation_degrees = 0
-		elif direction_player.x < 0: # Disparar hacia la izquierda
-			rotation_degrees = 180
+		$AnimatedSprite2D.rotation = deg_to_rad(0) + direction_player.angle()
 	 # Mover la bola de fuego
 		position += SPEED * delta * direction_player
 
