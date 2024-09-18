@@ -31,8 +31,7 @@ func _on_area_entered(area: Area2D) -> void:
 # Función para obtener la dirección hacia el enemigo más cercano		
 func get_direction_to_nearest_enemy() -> Vector2:
 	var nearest_enemy: Area2D = null
-	var shortest_distance: float = 10000000
-	print(shortest_distance)
+	var shortest_distance: float = INF
 	# Buscar en el grupo de enemigos
 	for enemy in get_tree().get_nodes_in_group("enemy_group"):
 		var distance = position.distance_to(enemy.position)

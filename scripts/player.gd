@@ -57,5 +57,5 @@ func decrease_life(value):
 		death()
 
 func death():
-	print("Muerto")
+	queue_free()
 	
