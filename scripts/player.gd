@@ -9,7 +9,7 @@ class_name Player
 var direction_player: Vector2
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		create_bullet()
+		#create_bullet()
 		create_shuriken()
 
 func _ready() -> void:

@@ -7,6 +7,7 @@
 radius = 22.0
 
 [node name="shuriken" type="Area2D"]
+collision_mask = 6
 script = ExtResource("1_y84x2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -22,4 +23,5 @@ shape = SubResource("CircleShape2D_io6hp")
 position = Vector2(2, 1.5)
 scale = Vector2(3.2, 3.05)
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
