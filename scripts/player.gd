@@ -4,10 +4,13 @@ class_name Player
 @export var SPEED = 100.0
 @export var life = 100
 @export var bullet_scene: PackedScene
+@export var shuriken_scene: PackedScene
+
 var direction_player: Vector2
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		create_bullet()
+		create_shuriken()
 
 func _ready() -> void:
 	$ProgressBar.value = life
@@ -41,7 +44,12 @@ func create_bullet():
 	bullet.direction_player = direction_player
 	get_parent().add_child(bullet)
 
-
+func create_shuriken():
+	var shuriken = shuriken_scene.instantiate()
+	shuriken.position = position
+	shuriken.direction_player = direction_player
+	get_parent().add_child(shuriken)
+	
 func decrease_life(value):
 	life -= value
 	$ProgressBar.value = life

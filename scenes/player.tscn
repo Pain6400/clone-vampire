@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://ssixnswy2px4"]
+[gd_scene load_steps=18 format=3 uid="uid://ssixnswy2px4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_h2pv7"]
 [ext_resource type="PackedScene" uid="uid://2ptvu5jtnuuj" path="res://scenes/bullet/bullet.tscn" id="2_lkiop"]
+[ext_resource type="PackedScene" uid="uid://cwu5so84hbrdr" path="res://scenes/bullet/shuriken/shuriken.tscn" id="3_e8luh"]
 [ext_resource type="Texture2D" uid="uid://dp7dhwvjxw4uq" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-1.png" id="3_fxf05"]
 [ext_resource type="Texture2D" uid="uid://8eb8phvadyny" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-2.png" id="4_gid8w"]
 [ext_resource type="Texture2D" uid="uid://cy1g3g0djngis" path="res://assets/art/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/player/idle/player-idle-3.png" id="5_t7il3"]
@@ -70,6 +71,7 @@ bg_color = Color(0.367853, 0.00383566, 0.127627, 1)
 motion_mode = 1
 script = ExtResource("1_h2pv7")
 bullet_scene = ExtResource("2_lkiop")
+shuriken_scene = ExtResource("3_e8luh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
