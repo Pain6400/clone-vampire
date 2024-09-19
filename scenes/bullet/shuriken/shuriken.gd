@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED = 200.0
+const SPEED = 150.0
 const ROTATION_SPEED = 10.00
 var direction_player: Vector2
 var target_direction: Vector2
